@@ -5,33 +5,39 @@
 #ifndef FT_CONTAINERS_ITERATOR_TRAITS_HPP
 #define FT_CONTAINERS_ITERATOR_TRAITS_HPP
 
+#include "iterator.hpp"
+
 namespace ft
 {
-    /// Partial specialization for pointer types.
-    template<typename _Tp>
-    struct iterator_traits<_Tp*>
-    {
-        typedef _Tp                         value_type;
-        typedef ptrdiff_t                   difference_type;
-        typedef _Tp*                        pointer;
-        typedef _Tp&                        reference;
+    template <typename Iter>
+    struct	iterator_traits {
 
-        difference_type 	Iter::difference_type
-        value_type 	Iter::value_type
-        pointer 	Iter::pointer
-        reference 	Iter::reference
-        iterator_category 	Iter::iterator_category
+        typedef typename Iter::difference_type		difference_type;
+        typedef typename Iter::value_type			value_type;
+        typedef typename Iter::pointer				pointer;
+        typedef typename Iter::reference			reference;
+        typedef typename Iter::iterator_category	iterator_category;
+
     };
 
-    /// Partial specialization for const pointer types.
-    template<typename _Tp>
-    struct iterator_traits<const _Tp*>
-    {
-        typedef random_access_iterator_tag iterator_category;
-        typedef _Tp                         value_type;
-        typedef ptrdiff_t                   difference_type;
-        typedef const _Tp*                  pointer;
-        typedef const _Tp&                  reference;
+    template <typename T>
+    struct	iterator_traits<T*> {
+        typedef ptrdiff_t						difference_type;
+        typedef T								value_type;
+        typedef T*								pointer;
+        typedef T&								reference;
+        typedef random_access_iterator_tag		iterator_category;
+    };
+
+    template <typename T>
+    struct	iterator_traits<const T*> {
+
+        typedef ptrdiff_t						difference_type;
+        typedef T								value_type;
+        typedef const T*						pointer;
+        typedef const T&						reference;
+        typedef random_access_iterator_tag		iterator_category;
+
     };
 
 }
