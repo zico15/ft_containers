@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:38:54 by edos-san          #+#    #+#             */
-/*   Updated: 2023/01/26 11:38:55 by edos-san         ###   ########.fr       */
+/*   Created: 2022/11/26 11:38:54 by edos-san          #+#    #+#             */
+/*   Updated: 2023/01/26 12:20:18 by edos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,18 @@ namespace ft
             vector (const vector& x){
 
             }
+
+
+
+            template <class InputIterator>
+            void assign (InputIterator first, InputIterator last){
+
+            }
+
+            void assign (size_type n, const value_type& val){
+
+            }
+
     };
 
 }
