@@ -1,6 +1,14 @@
-//
-// Created by edos-san on 1/22/23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   iterator_traits.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/26 11:39:24 by edos-san          #+#    #+#             */
+/*   Updated: 2023/01/26 11:39:26 by edos-san         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_CONTAINERS_ITERATOR_TRAITS_HPP
 #define FT_CONTAINERS_ITERATOR_TRAITS_HPP
